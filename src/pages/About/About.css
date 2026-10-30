@@ -1,0 +1,204 @@
+.about-headline {
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+  max-width: 900px;
+}
+
+.about-headline em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-taupe);
+}
+
+.about-hero-image {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  position: relative;
+}
+
+.about-image-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(17, 17, 16, 0.85);
+  color: var(--color-sandstone-light);
+  padding: 0.4rem 0.9rem;
+}
+
+/* Narrative Grid */
+.narrative-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+}
+
+.narrative-sidebar {
+  border-left: 1px solid var(--color-sandstone-border);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.narrative-side-text {
+  font-size: 1rem;
+  color: var(--color-obsidian);
+  line-height: 1.6;
+}
+
+.verified-badge {
+  color: var(--color-dune-gold-dark);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-dune-gold);
+  width: fit-content;
+}
+
+.narrative-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.narrative-body p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.value-card {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+}
+
+.value-number {
+  color: var(--color-dune-gold);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.85rem;
+  color: var(--color-sandstone-light);
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #A3A099;
+}
+
+/* Team Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-photo-wrap {
+  aspect-ratio: 4 / 5;
+  margin-bottom: 1.5rem;
+}
+
+.team-photo-wrap img {
+  filter: grayscale(10%) contrast(1.05);
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.team-name {
+  font-size: 1.65rem;
+}
+
+.team-role {
+  color: var(--color-dune-gold-dark);
+  font-size: 0.8rem;
+}
+
+.team-credentials {
+  color: var(--color-taupe);
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.team-bio {
+  font-size: 0.95rem;
+  color: var(--color-charcoal-subtle);
+  line-height: 1.6;
+}
+
+/* Milestones Timeline */
+.milestones-header {
+  margin-bottom: 3.5rem;
+}
+
+.milestones-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--color-sandstone-border);
+  align-items: baseline;
+}
+
+.milestone-year {
+  font-size: 1.35rem;
+  color: var(--color-dune-gold-dark);
+}
+
+.milestone-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.milestone-desc {
+  font-size: 1rem;
+  color: var(--color-charcoal-subtle);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .narrative-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .milestone-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,123 @@
+.services-headline {
+  margin-top: 1.5rem;
+  max-width: 900px;
+}
+
+.services-headline em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-taupe);
+}
+
+.services-vertical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.service-deep-panel {
+  border-top: 1px solid var(--color-sandstone-border);
+  padding-top: 4.5rem;
+}
+
+.service-panel-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.service-deep-panel:nth-child(even) .service-panel-grid {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.service-deep-panel:nth-child(even) .service-panel-visual {
+  order: 2;
+}
+
+.service-panel-visual {
+  aspect-ratio: 16 / 11;
+  width: 100%;
+}
+
+.service-panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.service-num {
+  color: var(--color-dune-gold-dark);
+}
+
+.service-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.15;
+}
+
+.service-sub-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--color-taupe);
+  margin-top: -0.5rem;
+}
+
+.service-summary-text {
+  font-size: 1.05rem;
+  color: var(--color-charcoal-subtle);
+  line-height: 1.7;
+}
+
+.service-capabilities-block {
+  margin: 1rem 0;
+  border-top: 1px solid var(--color-sandstone-border);
+  padding-top: 1.5rem;
+}
+
+.capabilities-label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--color-obsidian);
+}
+
+.capabilities-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.capabilities-checklist li {
+  font-size: 0.95rem;
+  color: var(--color-charcoal-subtle);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.capabilities-checklist li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-dune-gold-dark);
+}
+
+.service-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-panel-grid,
+  .service-deep-panel:nth-child(even) .service-panel-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .service-deep-panel:nth-child(even) .service-panel-visual {
+    order: 0;
+  }
+}

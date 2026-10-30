@@ -1,0 +1,228 @@
+.studio-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease, height 0.4s ease;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+.studio-header.scrolled {
+  height: 75px;
+  background-color: rgba(247, 245, 240, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(18, 18, 17, 0.08);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--color-obsidian);
+}
+
+.logo-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--color-taupe);
+  margin-top: 2px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-subtle);
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-obsidian);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-obsidian);
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Header Action */
+.header-action {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.commission-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--color-sandstone-border);
+  color: var(--color-obsidian);
+  transition: var(--transition-smooth);
+}
+
+.commission-cta:hover {
+  background-color: var(--color-obsidian);
+  color: var(--color-sandstone-light);
+  border-color: var(--color-obsidian);
+}
+
+.mobile-toggle {
+  display: none;
+  color: var(--color-obsidian);
+  padding: 0.5rem;
+  z-index: 1010;
+}
+
+/* Mobile Fullscreen Menu */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-sandstone-light);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 6rem 2rem 3rem 2rem;
+  overflow-y: auto;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-sandstone-border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--color-obsidian);
+  border-bottom: 1px solid rgba(18, 18, 17, 0.05);
+  padding-bottom: 0.75rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
+  color: var(--color-dune-gold-dark);
+  transform: translateX(10px);
+}
+
+.mobile-item-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-taupe);
+}
+
+.mobile-menu-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  border-top: 1px solid var(--color-sandstone-border);
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+}
+
+.mobile-footer-col span {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.mobile-footer-col p {
+  font-size: 0.95rem;
+  color: var(--color-charcoal-subtle);
+  line-height: 1.5;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  .desktop-nav {
+    display: none;
+  }
+  .commission-cta {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+}

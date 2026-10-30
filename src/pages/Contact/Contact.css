@@ -1,0 +1,227 @@
+.contact-headline {
+  margin-top: 1.5rem;
+  max-width: 900px;
+}
+
+.contact-headline em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-taupe);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 5rem;
+}
+
+/* Form Card */
+.form-card {
+  background-color: var(--color-sandstone-card);
+  border: 1px solid var(--color-sandstone-border);
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.form-tag {
+  color: var(--color-dune-gold-dark);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.form-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 2.5rem;
+}
+
+.commission-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  color: var(--color-obsidian-muted);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  background-color: var(--color-sandstone-light);
+  border: 1px solid var(--color-sandstone-border);
+  color: var(--color-obsidian);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-obsidian);
+  background-color: var(--color-white);
+}
+
+.input-error {
+  border-color: var(--color-error) !important;
+}
+
+.error-text {
+  font-size: 0.75rem;
+  color: var(--color-error);
+  margin-top: 0.2rem;
+}
+
+.form-submit-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.25rem;
+}
+
+/* Success Banner */
+.form-success-banner {
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--color-sandstone-light);
+  border: 1px solid var(--color-dune-gold);
+  padding: 2.5rem;
+}
+
+.form-success-banner h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-success-banner p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Studio Info Column */
+.studio-location-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-left: 1px solid var(--color-sandstone-border);
+  padding-left: 3rem;
+}
+
+.studio-location-card h3 {
+  font-size: 2.2rem;
+  margin-top: -0.5rem;
+}
+
+.location-detail {
+  font-size: 1.05rem;
+  color: var(--color-charcoal-subtle);
+  line-height: 1.6;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.contact-detail-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.contact-detail-row span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-taupe);
+  margin-bottom: 0.2rem;
+}
+
+.contact-detail-row a,
+.contact-detail-row p {
+  font-size: 0.95rem;
+  color: var(--color-obsidian);
+  margin-bottom: 0;
+}
+
+.contact-detail-row a:hover {
+  color: var(--color-dune-gold-dark);
+}
+
+/* Map Placeholder */
+.interactive-map-placeholder {
+  background-color: var(--color-obsidian);
+  color: var(--color-sandstone-light);
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-map-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(194, 166, 118, 0.15), transparent 70%);
+}
+
+.map-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.map-inner span {
+  color: var(--color-dune-gold);
+}
+
+.map-inner h4 {
+  font-size: 1.5rem;
+  color: var(--color-sandstone-light);
+}
+
+.map-inner p {
+  font-size: 0.875rem;
+  color: #B5B2AA;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .studio-location-card {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--color-sandstone-border);
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .form-card {
+    padding: 1.75rem;
+  }
+}

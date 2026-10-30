@@ -1,0 +1,104 @@
+.approach-headline {
+  margin-top: 1.5rem;
+  max-width: 900px;
+}
+
+.approach-headline em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-taupe);
+}
+
+.approach-stages-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.approach-stage-item {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--color-sandstone-border);
+  gap: 3rem;
+}
+
+.stage-marker {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stage-phase-tag {
+  color: var(--color-dune-gold-dark);
+  font-size: 0.9rem;
+}
+
+.stage-name {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.stage-desc {
+  font-size: 1.1rem;
+  color: var(--color-charcoal-subtle);
+  line-height: 1.75;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.stage-deliverables-box {
+  background-color: var(--color-sandstone-card);
+  border: 1px solid var(--color-sandstone-border);
+  padding: 1.5rem 2rem;
+  max-width: 800px;
+}
+
+.deliv-title {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-obsidian);
+  font-size: 0.75rem;
+}
+
+.deliv-text {
+  font-size: 0.95rem;
+  color: var(--color-charcoal-subtle);
+  margin-bottom: 0 !important;
+}
+
+/* Craft Section */
+.craft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.craft-text h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.craft-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.craft-visual {
+  aspect-ratio: 4 / 3;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .approach-stage-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+  }
+  .craft-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
